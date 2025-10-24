@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://3jlldpsx5vpm"]
+
+[ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://snakeA.tscn" id="1_ig7tw"]
+
+[node name="main" type="Node2D"]
+
+[node name="snake" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(2, -7)
