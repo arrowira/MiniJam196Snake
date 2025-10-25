@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://3qjs36cp3e8m"]
+
+[node name="snakeB" type="Node2D"]
+
+[node name="head" type="Node2D" parent="."]
+
+[node name="segmentContainer" type="Node2D" parent="."]
