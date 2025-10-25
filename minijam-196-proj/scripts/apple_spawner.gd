@@ -7,5 +7,5 @@ func _physics_process(delta: float) -> void:
 	
 func Spawn():
 	var A = Apple.instantiate()
-	A.position = Vector2(640/(32*randi_range(1, 20)), 640/(32*32*randi_range(1, 20)))
+	A.position = Vector2(640/(32*randi_range(1, 20)), 640/(32*randi_range(1, 20)))
 	add_child(A)
