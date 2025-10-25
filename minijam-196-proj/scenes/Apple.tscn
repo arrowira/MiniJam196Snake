@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dow77vk24fu6l" path="res://misc/icon.svg" id="1_nm403"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mirkr"]
-size = Vector2(128, 126)
+size = Vector2(112, 104)
 
 [node name="Apple" type="Node2D"]
 
@@ -12,8 +12,9 @@ position = Vector2(16, -16)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_nm403")
 
-[node name="AppleCollider" type="Area2D" parent="Sprite2D"]
+[node name="AppleCollider" type="Area2D" parent="."]
+position = Vector2(16, -16)
+scale = Vector2(0.25, 0.25)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AppleCollider"]
-position = Vector2(0, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AppleCollider"]
 shape = SubResource("RectangleShape2D_mirkr")

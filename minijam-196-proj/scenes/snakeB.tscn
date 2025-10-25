@@ -20,9 +20,9 @@ position = Vector2(16.00003, 16.00003)
 scale = Vector2(0.05000004, 0.05000004)
 texture = ExtResource("2_svus2")
 
-[node name="Area2D" type="Area2D" parent="head"]
+[node name="SnakeHead" type="Area2D" parent="head"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="head/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head/SnakeHead"]
 position = Vector2(16, 16.5)
 shape = SubResource("RectangleShape2D_km0su")
 
