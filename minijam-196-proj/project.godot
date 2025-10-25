@@ -61,3 +61,4 @@ p2right={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.021434633, 0.021434637, 0.021434618, 1)
