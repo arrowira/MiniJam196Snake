@@ -28,7 +28,6 @@ func updateSnake(headPosition: Vector2):
 #Head Collider
 func Collided(area: Area2D) -> void:
 	if(area.name == "AppleCollider"):
-		#increment length
 		area.get_parent().queue_free()
 	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
 		print(area.name)
