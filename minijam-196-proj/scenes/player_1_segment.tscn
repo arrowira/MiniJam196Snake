@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ck1xhfy3qt26y"]
 
-[ext_resource type="Texture2D" uid="uid://cw1e1ccus7o7w" path="res://sprites/snake-1.png.png" id="1_545wh"]
+[ext_resource type="Texture2D" uid="uid://lm8wjeauffjb" path="res://sprites/snake-2.png.png" id="1_545wh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_545wh"]
 size = Vector2(30, 30)
@@ -8,8 +8,8 @@ size = Vector2(30, 30)
 [node name="player1Segment" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(15.999997, 15.999998)
-scale = Vector2(0.04999999, 0.049999993)
+position = Vector2(16.5, 16)
+scale = Vector2(0.032812502, 0.034375)
 texture = ExtResource("1_545wh")
 
 [node name="SnakeBody" type="Area2D" parent="."]

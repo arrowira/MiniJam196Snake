@@ -3,9 +3,10 @@ var segments = 3
 var snakeSegments = []
 @export var player1segment := preload("res://scenes/player_1_segment.tscn")
 func _ready() -> void:
+	snakeSegments.append($head.position)
 	for i in range(segments):
 		var newSegment := player1segment.instantiate()
-		var newSegmentPos := Vector2(-i*32,0)
+		var newSegmentPos := Vector2(-i*32-32,0)
 		newSegment.position = newSegmentPos
 		$segmentContainer.add_child(newSegment)
 		snakeSegments.append(newSegmentPos)
@@ -20,7 +21,7 @@ func updateSnake(headPosition: Vector2):
 	
 	newSnakeSegments[0] = headPosition
 	for i in range(len($segmentContainer.get_children())):
-		$segmentContainer.get_children()[i].position = newSnakeSegments[i]
+		$segmentContainer.get_children()[i].position = newSnakeSegments[i+1]
 	
 	snakeSegments = newSnakeSegments.duplicate(true)
 
@@ -29,8 +30,7 @@ func Collided(area: Area2D) -> void:
 	if(area.name == "AppleCollider"):
 		#increment length
 		area.get_parent().queue_free()
-	if(area.name == "SnakeHead"):
-		area.queue_free()
-		queue_free()
-	if(area.name == "SnakeBody"):
-		queue_free()
+	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
+		print(area.name)
+		$head.running = false
+	
