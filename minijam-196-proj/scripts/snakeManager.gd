@@ -1,7 +1,7 @@
 extends Node2D
 var segments = 3
 var snakeSegments = []
-var player1segment := preload("res://player_1_segment.tscn")
+var player1segment := preload("res://scenes/player_1_segment.tscn")
 func _ready() -> void:
 	for i in range(segments):
 		var newSegment := player1segment.instantiate()

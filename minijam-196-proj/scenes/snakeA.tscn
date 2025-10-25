@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsomo3xmi6joa"]
 
-[ext_resource type="Script" uid="uid://bu1gi3uc16dpe" path="res://player1Movement.gd" id="1_r11do"]
-[ext_resource type="Script" uid="uid://dypxikpkp2onf" path="res://snakeManager.gd" id="1_t37lf"]
-[ext_resource type="Texture2D" uid="uid://dow77vk24fu6l" path="res://icon.svg" id="1_yfqqe"]
+[ext_resource type="Script" uid="uid://bu1gi3uc16dpe" path="res://scripts/player1Movement.gd" id="1_r11do"]
+[ext_resource type="Script" uid="uid://dypxikpkp2onf" path="res://scripts/snakeManager.gd" id="1_t37lf"]
+[ext_resource type="Texture2D" uid="uid://dow77vk24fu6l" path="res://misc/icon.svg" id="1_yfqqe"]
 
 [node name="snake" type="Node2D"]
 script = ExtResource("1_t37lf")
