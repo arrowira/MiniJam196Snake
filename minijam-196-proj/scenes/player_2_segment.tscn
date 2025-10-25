@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cqw168b0vu0te"]
+[gd_scene load_steps=3 format=3 uid="uid://cqw168b0vu0te"]
 
 [ext_resource type="Texture2D" uid="uid://lm8wjeauffjb" path="res://sprites/snake-2.png.png" id="1_cdgho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdgho"]
+size = Vector2(30, 30)
 
 [node name="player_2_segment" type="Node2D"]
 
@@ -8,3 +11,9 @@
 position = Vector2(15.999985, 15.999985)
 scale = Vector2(0.04999997, 0.04999997)
 texture = ExtResource("1_cdgho")
+
+[node name="SnakeBody" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SnakeBody"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_cdgho")

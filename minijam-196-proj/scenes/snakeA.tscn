@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsomo3xmi6joa"]
+[gd_scene load_steps=5 format=3 uid="uid://dsomo3xmi6joa"]
 
 [ext_resource type="Script" uid="uid://bu1gi3uc16dpe" path="res://scripts/player1Movement.gd" id="1_r11do"]
 [ext_resource type="Script" uid="uid://dypxikpkp2onf" path="res://scripts/snakeManager.gd" id="1_t37lf"]
 [ext_resource type="Texture2D" uid="uid://cw1e1ccus7o7w" path="res://sprites/snake-1.png.png" id="3_tq7ts"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tq7ts"]
+size = Vector2(30, 30)
 
 [node name="snakeA" type="Node2D"]
 script = ExtResource("1_t37lf")
@@ -15,4 +18,12 @@ position = Vector2(15.999997, 15.999998)
 scale = Vector2(0.04999999, 0.049999993)
 texture = ExtResource("3_tq7ts")
 
+[node name="SnakeHead" type="Area2D" parent="head"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head/SnakeHead"]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_tq7ts")
+
 [node name="segmentContainer" type="Node2D" parent="."]
+
+[connection signal="area_entered" from="head/SnakeHead" to="." method="Collided"]

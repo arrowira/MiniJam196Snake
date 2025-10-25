@@ -23,3 +23,14 @@ func updateSnake(headPosition: Vector2):
 		$segmentContainer.get_children()[i].position = newSnakeSegments[i]
 	
 	snakeSegments = newSnakeSegments.duplicate(true)
+
+#Head Collider
+func Collided(area: Area2D) -> void:
+	if(area.name == "AppleCollider"):
+		#increment length
+		area.get_parent().queue_free()
+	if(area.name == "SnakeHead"):
+		area.queue_free()
+		queue_free()
+	if(area.name == "SnakeBody"):
+		queue_free()

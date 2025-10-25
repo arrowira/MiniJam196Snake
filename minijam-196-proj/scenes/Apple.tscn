@@ -12,8 +12,8 @@ position = Vector2(16, -16)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_nm403")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D"]
+[node name="AppleCollider" type="Area2D" parent="Sprite2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/AppleCollider"]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_mirkr")
