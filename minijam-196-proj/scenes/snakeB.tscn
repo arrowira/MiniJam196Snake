@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dypxikpkp2onf" path="res://scripts/snakeManager.gd" id="1_j7cvy"]
 [ext_resource type="Texture2D" uid="uid://lm8wjeauffjb" path="res://sprites/snake-2.png.png" id="2_svus2"]
 [ext_resource type="PackedScene" uid="uid://cqw168b0vu0te" path="res://scenes/player_2_segment.tscn" id="2_x26v3"]
-[ext_resource type="Script" uid="uid://vt5innic22ep" path="res://scenes/player2Movement.gd" id="3_km0su"]
+[ext_resource type="Script" uid="uid://vt5innic22ep" path="res://scripts/player2Movement.gd" id="3_km0su"]
 
 [node name="snakeB" type="Node2D"]
 script = ExtResource("1_j7cvy")
