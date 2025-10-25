@@ -13,4 +13,4 @@ position = Vector2(64, 0)
 position = Vector2(320, 0)
 
 [node name="AppleSpawner" parent="." instance=ExtResource("3_sugp2")]
-spawnSpeed = 20
+spawnSpeed = 2

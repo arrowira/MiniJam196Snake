@@ -11,10 +11,18 @@ func _ready() -> void:
 		$segmentContainer.add_child(newSegment)
 		snakeSegments.append(newSegmentPos)
 
-
+var adding = false
 
 
 func updateSnake(headPosition: Vector2):
+	if adding:
+		adding=false
+		var newSegment := player1segment.instantiate()
+		
+		newSegment.position = snakeSegments[0]
+		$segmentContainer.add_child(newSegment)
+		snakeSegments.append(snakeSegments[0])
+	
 	var newSnakeSegments = snakeSegments.duplicate(true)
 	for i in range(len(snakeSegments)-1):
 		newSnakeSegments[i+1]=snakeSegments[i]
@@ -24,10 +32,13 @@ func updateSnake(headPosition: Vector2):
 		$segmentContainer.get_children()[i].position = newSnakeSegments[i+1]
 	
 	snakeSegments = newSnakeSegments.duplicate(true)
-
+func addSegment():
+	adding = true
 #Head Collider
 func Collided(area: Area2D) -> void:
+	print(area.name)
 	if(area.name == "AppleCollider"):
+		addSegment()
 		area.get_parent().queue_free()
 	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
 		print(area.name)
@@ -35,6 +46,8 @@ func Collided(area: Area2D) -> void:
 	
 func Snake2Head(area: Area2D) -> void:
 	if(area.name == "AppleCollider"):
+		addSegment()
+		
 		area.get_parent().queue_free()
 	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
 		print(area.name)
