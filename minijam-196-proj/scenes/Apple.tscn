@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cqfv35w0txg3y"]
 
-[ext_resource type="Texture2D" uid="uid://dow77vk24fu6l" path="res://misc/icon.svg" id="1_nm403"]
+[ext_resource type="Texture2D" uid="uid://iqhv0tg164wl" path="res://sprites/consumable_sprites.png" id="1_nm403"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mirkr"]
 size = Vector2(112, 104)
@@ -9,8 +9,9 @@ size = Vector2(112, 104)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(16, -16)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(4.000001, 4.0000005)
 texture = ExtResource("1_nm403")
+hframes = 2
 
 [node name="AppleCollider" type="Area2D" parent="."]
 position = Vector2(16, -16)
