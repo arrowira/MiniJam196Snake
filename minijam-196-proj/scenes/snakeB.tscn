@@ -27,3 +27,5 @@ position = Vector2(16, 16.5)
 shape = SubResource("RectangleShape2D_km0su")
 
 [node name="segmentContainer" type="Node2D" parent="."]
+
+[connection signal="area_entered" from="head/SnakeHead" to="." method="Snake2Head"]

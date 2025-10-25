@@ -33,3 +33,9 @@ func Collided(area: Area2D) -> void:
 		print(area.name)
 		$head.running = false
 	
+func Snake2Head(area: Area2D) -> void:
+	if(area.name == "AppleCollider"):
+		area.get_parent().queue_free()
+	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
+		print(area.name)
+		$head.running = false
