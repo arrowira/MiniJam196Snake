@@ -1,7 +1,18 @@
-[gd_scene format=3 uid="uid://3qjs36cp3e8m"]
+[gd_scene load_steps=4 format=3 uid="uid://3qjs36cp3e8m"]
+
+[ext_resource type="Script" uid="uid://dypxikpkp2onf" path="res://scripts/snakeManager.gd" id="1_j7cvy"]
+[ext_resource type="Texture2D" uid="uid://lm8wjeauffjb" path="res://sprites/snake-2.png.png" id="2_svus2"]
+[ext_resource type="PackedScene" uid="uid://cqw168b0vu0te" path="res://scenes/player_2_segment.tscn" id="2_x26v3"]
 
 [node name="snakeB" type="Node2D"]
+script = ExtResource("1_j7cvy")
+player1segment = ExtResource("2_x26v3")
 
 [node name="head" type="Node2D" parent="."]
+
+[node name="Snake2_png" type="Sprite2D" parent="head"]
+position = Vector2(16.00003, 16.00003)
+scale = Vector2(0.05000004, 0.05000004)
+texture = ExtResource("2_svus2")
 
 [node name="segmentContainer" type="Node2D" parent="."]
