@@ -16,16 +16,20 @@ func _physics_process(delta: float) -> void:
 	#inputs
 	if Input.is_action_just_pressed("p1down") and direction!=Vector2(0,-1):
 		direction = Vector2(0,1)
-		turnStarted = true
+		if running:
+			turnStarted = true
 	if Input.is_action_just_pressed("p1up") and direction!=Vector2(0,1):
 		direction = Vector2(0,-1)
-		turnStarted = true
+		if running:
+			turnStarted = true
 	if Input.is_action_just_pressed("p1right") and direction!=Vector2(-1,0):
 		direction = Vector2(1,0)
-		turnStarted = true
+		if running:
+			turnStarted = true
 	if Input.is_action_just_pressed("p1left") and direction!=Vector2(1,0):
 		direction = Vector2(-1,0)
-		turnStarted = true
+		if running:
+			turnStarted = true
 
 	
 	
