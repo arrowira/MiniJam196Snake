@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://3jlldpsx5vpm"]
 
-[ext_resource type="Script" uid="uid://bwoh6txxg7ox7" path="res://scripts/gameManager.gd" id="1_jyhfs"]
+[ext_resource type="Script" path="res://scenes/gameManager.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://btptv76as7oeo" path="res://scenes/snakeB.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://bfhbaw05in4qg" path="res://scenes/AppleSpawner.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" path="res://scenes/AppleSpawner.tscn" id="3_sugp2"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_jyhfs")
 
 [node name="snakeA" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(71, 0)
+position = Vector2(64, 0)
 
 [node name="snakeB" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(320, 0)
