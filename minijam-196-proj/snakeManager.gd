@@ -1,5 +1,5 @@
 extends Node2D
-var segments = 20
+var segments = 3
 var snakeSegments = []
 var player1segment := preload("res://player_1_segment.tscn")
 func _ready() -> void:
