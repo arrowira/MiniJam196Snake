@@ -1,9 +1,12 @@
 extends Node2D
 
 var Apple = preload("res://scenes/Apple.tscn")
-
+@export var spawnSpeed = 1
+var t = 0
 func _physics_process(delta: float) -> void:
-	Spawn()
+	t+=1
+	if t%spawnSpeed ==0:
+		Spawn()
 	
 func Spawn():
 	var A = Apple.instantiate()

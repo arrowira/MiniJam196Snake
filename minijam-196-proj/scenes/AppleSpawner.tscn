@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfhbaw05in4qg"]
+[gd_scene load_steps=2 format=3 uid="uid://bt2b8pp2xn6db"]
 
 [ext_resource type="Script" uid="uid://cxfee5n3swmaf" path="res://scripts/apple_spawner.gd" id="1_1tm8p"]
 
