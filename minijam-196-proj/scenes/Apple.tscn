@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqfv35w0txg3y"]
+
+[ext_resource type="Texture2D" uid="uid://dow77vk24fu6l" path="res://misc/icon.svg" id="1_nm403"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mirkr"]
+size = Vector2(128, 127)
+
+[node name="Apple" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nm403")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_mirkr")
