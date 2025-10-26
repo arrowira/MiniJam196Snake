@@ -69,3 +69,6 @@ func Snake2Head(area: Area2D) -> void:
 		txt.bbcode_enabled = true
 		txt.text = "[color=red]Red[/color]"
 		$head.running = false
+		
+func getSnakeSegPos(pos: int) -> Vector2:
+	return snakeSegments[pos-1]
