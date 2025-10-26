@@ -30,13 +30,19 @@ position = Vector2(576, 320)
 [node name="Hud" type="CanvasLayer" parent="."]
 
 [node name="Prefix" type="RichTextLabel" parent="Hud"]
+anchors_preset = -1
+anchor_right = 0.07725695
+anchor_bottom = 0.06944445
 offset_right = 72.0
 offset_bottom = 40.0
 theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+theme_override_font_sizes/normal_font_size = 32
 text = "Turn:"
+metadata/_edit_use_anchors_ = true
 
 [node name="RemOrRam" type="RichTextLabel" parent="Hud"]
-offset_left = 66.0
-offset_right = 199.0
-offset_bottom = 40.0
+offset_left = 144.0
+offset_right = 330.0
+offset_bottom = 73.0
 theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+theme_override_font_sizes/normal_font_size = 32
