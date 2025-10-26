@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://b76ffwimyi3sm" path="res://sprites/snakeHead-2.png.png" id="6_tipki"]
 [ext_resource type="Texture2D" uid="uid://sjvkab515afb" path="res://sprites/snakeHead-1.png.png" id="8_85g3d"]
-[ext_resource type="PackedScene" path="res://scenes/time_spawner.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://b6ybdm80pbatp" path="res://scenes/time_spawner.tscn" id="9_85g3d"]
 [ext_resource type="AudioStream" uid="uid://bs3eh0insxy55" path="res://misc/pickupCoin.wav" id="10_choun"]
 [ext_resource type="AudioStream" uid="uid://baoatoaa4mbrh" path="res://misc/random.wav" id="11_ya4ey"]
 
