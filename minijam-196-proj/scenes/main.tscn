@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://3jlldpsx5vpm"]
+[gd_scene load_steps=12 format=3 uid="uid://3jlldpsx5vpm"]
 
 [ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cyhlxeltdgqch" path="res://scenes/main.gd" id="1_tefeu"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://b6ybdm80pbatp" path="res://scenes/time_spawner.tscn" id="9_85g3d"]
 [ext_resource type="AudioStream" uid="uid://bs3eh0insxy55" path="res://misc/pickupCoin.wav" id="10_choun"]
 [ext_resource type="AudioStream" uid="uid://baoatoaa4mbrh" path="res://misc/random.wav" id="11_ya4ey"]
-[ext_resource type="PackedScene" uid="uid://44gvqt8prq2e" path="res://scenes/tutorial.tscn" id="12_eb6dy"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_tefeu")
@@ -168,7 +167,5 @@ volume_db = 4.771
 [node name="deathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_ya4ey")
 volume_db = 7.633
-
-[node name="Tutorial" parent="." instance=ExtResource("12_eb6dy")]
 
 [connection signal="pressed" from="Hud/DeathScreen/Button" to="." method="_on_button_pressed"]
