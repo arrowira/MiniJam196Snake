@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://44gvqt8prq2e"]
+
+[ext_resource type="Script" uid="uid://cg37xyqq5pior" path="res://scripts/tutorial.gd" id="1_8ho6b"]
+[ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="2_ph3nu"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_8ho6b")
+
+[node name="pt1" type="ColorRect" parent="."]
+modulate = Color(0.56999964, 0.6032721, 0.58303857, 1)
+offset_left = 288.0
+offset_top = 160.0
+offset_right = 832.0
+offset_bottom = 512.0
+color = Color(0.43166798, 0.41613847, 0.41240484, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="pt1"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 543.0
+offset_bottom = 355.0
+theme_override_fonts/normal_font = ExtResource("2_ph3nu")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]Welcome to Caduceus. The red player uses arrow keys, the blue player uses WASD.
+
+Red starts first. Use the arrowkeys to start moving"
+
+[node name="pt1Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="pt1Timer" to="." method="_on_pt_1_timer_timeout"]
