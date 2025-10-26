@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cyhlxeltdgqch" path="res://scenes/main.gd" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://btptv76as7oeo" path="res://scenes/snakeB.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://bfhbaw05in4qg" path="res://scenes/AppleSpawner.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bt2b8pp2xn6db" path="res://scenes/AppleSpawner.tscn" id="3_sugp2"]
 [ext_resource type="AudioStream" uid="uid://dmhgrfd2s2y8w" path="res://misc/snakeGameMusic.mp3" id="4_jyhfs"]
 [ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="5_tbgi4"]
 
