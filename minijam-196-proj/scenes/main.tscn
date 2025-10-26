@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://3jlldpsx5vpm"]
+[gd_scene load_steps=9 format=3 uid="uid://3jlldpsx5vpm"]
 
 [ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cyhlxeltdgqch" path="res://scenes/main.gd" id="1_tefeu"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bfhbaw05in4qg" path="res://scenes/AppleSpawner.tscn" id="3_sugp2"]
 [ext_resource type="AudioStream" uid="uid://dmhgrfd2s2y8w" path="res://misc/snakeGameMusic.mp3" id="4_jyhfs"]
 [ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://b76ffwimyi3sm" path="res://sprites/snakeHead-2.png.png" id="6_tipki"]
+[ext_resource type="Texture2D" uid="uid://sjvkab515afb" path="res://sprites/snakeHead-1.png.png" id="8_85g3d"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_tefeu")
@@ -28,6 +30,44 @@ autoplay = true
 position = Vector2(576, 320)
 
 [node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="Rem" type="Sprite2D" parent="Hud"]
+position = Vector2(1090, 590)
+scale = Vector2(0.296, 0.35)
+texture = ExtResource("6_tipki")
+
+[node name="Blue" type="RichTextLabel" parent="Hud/Rem"]
+anchors_preset = -1
+anchor_left = 0.06832294
+anchor_top = 6.64769
+anchor_right = 2.0254183
+anchor_bottom = 7.8619757
+offset_left = -244.03973
+offset_top = -1120.7733
+offset_right = -172.03973
+offset_bottom = -1080.7733
+theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+theme_override_font_sizes/normal_font_size = 96
+metadata/_edit_use_anchors_ = true
+
+[node name="Ram" type="Sprite2D" parent="Hud"]
+position = Vector2(44.249996, 589)
+scale = Vector2(0.32187504, 0.35000002)
+texture = ExtResource("8_85g3d")
+
+[node name="Red" type="RichTextLabel" parent="Hud/Ram"]
+anchors_preset = -1
+anchor_left = 0.06832294
+anchor_top = 6.64769
+anchor_right = 1.9290022
+anchor_bottom = 8.040547
+offset_left = 103.24308
+offset_top = -1117.916
+offset_right = 175.24307
+offset_bottom = -1077.916
+theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+theme_override_font_sizes/normal_font_size = 96
+metadata/_edit_use_anchors_ = true
 
 [node name="Prefix" type="RichTextLabel" parent="Hud"]
 anchors_preset = -1
