@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cxgmosw2davrv"]
 
-[ext_resource type="FontFile" uid="uid://5lcd27m73n8t" path="res://misc/Returns.ttf" id="1_jfien"]
+[ext_resource type="FontFile" uid="uid://5lcd27m73n8t" path="res://Fonts/Returns.ttf" id="1_jfien"]
 [ext_resource type="Script" uid="uid://dob3a6ma780p5" path="res://scenes/main_menu.gd" id="1_y2rfe"]
 [ext_resource type="Texture2D" uid="uid://b2ohhyowgdkob" path="res://misc/snake menu.png" id="2_0bfng"]
 
