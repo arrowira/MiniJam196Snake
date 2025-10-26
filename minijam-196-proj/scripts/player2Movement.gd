@@ -52,3 +52,4 @@ func _physics_process(delta: float) -> void:
 		running = false
 		turnStarted=false
 		get_parent().get_parent().get_node("snakeA").get_node("head").running=true
+		get_parent().get_parent().whosTurn = 2
