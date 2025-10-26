@@ -15,22 +15,25 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	#inputs
 	if running:
-		if Input.is_action_just_pressed("p2down") and direction != Vector2(0, -1) and running:
+		var prevPos = get_parent().getSnakeSegPos(2)
+		var currPos = get_parent().getSnakeSegPos(1)
+		var prevDir = Vector2(-(currPos.x-prevPos.x)/32,-(currPos.y-prevPos.y)/32)
+		if Input.is_action_just_pressed("p2down") and direction != Vector2(0, -1) and running and prevDir!=Vector2(0,1):
 			direction = Vector2(0, 1)
 			$headTexture.rotation = deg_to_rad(180)
 			turnStarted = true
 
-		if Input.is_action_just_pressed("p2up") and direction != Vector2(0, 1) and running:
+		if Input.is_action_just_pressed("p2up") and direction != Vector2(0, 1) and running and prevDir!=Vector2(0,-1):
 			direction = Vector2(0, -1)
 			$headTexture.rotation = 0
 			turnStarted = true
 
-		if Input.is_action_just_pressed("p2right") and direction != Vector2(-1, 0) and running:
+		if Input.is_action_just_pressed("p2right") and direction != Vector2(-1, 0) and running and prevDir!=Vector2(1,0):
 			direction = Vector2(1, 0)
 			$headTexture.rotation = deg_to_rad(90)
 			turnStarted = true
 
-		if Input.is_action_just_pressed("p2left") and direction != Vector2(1, 0) and running:
+		if Input.is_action_just_pressed("p2left") and direction != Vector2(1, 0) and running and prevDir!=Vector2(-1,0):
 			direction = Vector2(-1, 0)
 			$headTexture.rotation = deg_to_rad(270)
 			turnStarted = true
