@@ -18,5 +18,5 @@ spawnSpeed = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jyhfs")
-volume_db = -7.535
+volume_db = -19.939
 autoplay = true

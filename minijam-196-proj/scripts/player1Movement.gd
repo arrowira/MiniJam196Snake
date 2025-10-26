@@ -16,19 +16,29 @@ func _physics_process(delta: float) -> void:
 	#inputs
 	if Input.is_action_just_pressed("p1down") and direction!=Vector2(0,-1):
 		direction = Vector2(0,1)
+		
+		print($headTexture.rotation)
 		if running:
+			$headTexture.rotation=deg_to_rad(180)
 			turnStarted = true
 	if Input.is_action_just_pressed("p1up") and direction!=Vector2(0,1):
 		direction = Vector2(0,-1)
+		
+		
 		if running:
+			$headTexture.rotation=0
 			turnStarted = true
 	if Input.is_action_just_pressed("p1right") and direction!=Vector2(-1,0):
 		direction = Vector2(1,0)
+		
 		if running:
+			$headTexture.rotation=deg_to_rad(90)
 			turnStarted = true
 	if Input.is_action_just_pressed("p1left") and direction!=Vector2(1,0):
+		
 		direction = Vector2(-1,0)
 		if running:
+			$headTexture.rotation=deg_to_rad(270)
 			turnStarted = true
 
 	
