@@ -8,6 +8,7 @@ var turnLimit = 10
 var stepTime = 3
 var running = true
 
+
 var turnStarted = false
 
 func _ready() -> void:
@@ -16,8 +17,7 @@ func _physics_process(delta: float) -> void:
 	#inputs
 	if Input.is_action_just_pressed("p1down") and direction!=Vector2(0,-1):
 		direction = Vector2(0,1)
-		
-		print($headTexture.rotation)
+	
 		if running:
 			$headTexture.rotation=deg_to_rad(180)
 			turnStarted = true
