@@ -7,6 +7,7 @@
 script = ExtResource("1_8ho6b")
 
 [node name="pt1" type="ColorRect" parent="."]
+visible = false
 modulate = Color(0.56999964, 0.6032721, 0.58303857, 1)
 offset_left = 288.0
 offset_top = 160.0
@@ -28,5 +29,49 @@ text = "[center]Welcome to Caduceus. The red player uses arrow keys, the blue pl
 Red starts first. Use the arrowkeys to start moving"
 
 [node name="pt1Timer" type="Timer" parent="."]
+wait_time = 1.2
+one_shot = true
+
+[node name="pt2" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0.56999964, 0.6032721, 0.58303857, 1)
+offset_left = 345.0
+offset_top = 218.0
+offset_right = 787.0
+offset_bottom = 406.0
+color = Color(0.43166798, 0.41613847, 0.41240484, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="pt2"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 3.0
+offset_right = 442.0
+offset_bottom = 355.0
+theme_override_fonts/normal_font = ExtResource("2_ph3nu")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center] Its blue's turn now. The blue player uses WASD to move."
+
+[node name="pt3" type="ColorRect" parent="."]
+modulate = Color(0.56999964, 0.6032721, 0.58303857, 1)
+offset_left = 256.0
+offset_top = 130.0
+offset_right = 917.0
+offset_bottom = 442.0
+color = Color(0.43166798, 0.41613847, 0.41240484, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="pt3"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 657.0
+offset_bottom = 407.0
+theme_override_fonts/normal_font = ExtResource("2_ph3nu")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center] As the game continues, powerups will spawn around the arena. 
+
+Apples extend you're snake's length.
+Clocks extend turn length."
 
 [connection signal="timeout" from="pt1Timer" to="." method="_on_pt_1_timer_timeout"]
