@@ -1,0 +1,174 @@
+[gd_scene load_steps=13 format=3 uid="uid://dsskau34qr8d1"]
+
+[ext_resource type="Script" uid="uid://cyhlxeltdgqch" path="res://scenes/main.gd" id="1_xlbq2"]
+[ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="2_4vxjc"]
+[ext_resource type="PackedScene" uid="uid://btptv76as7oeo" path="res://scenes/snakeB.tscn" id="3_ymewv"]
+[ext_resource type="PackedScene" uid="uid://bfhbaw05in4qg" path="res://scenes/AppleSpawner.tscn" id="4_mcu7n"]
+[ext_resource type="AudioStream" uid="uid://dmhgrfd2s2y8w" path="res://misc/snakeGameMusic.mp3" id="5_03m2t"]
+[ext_resource type="Texture2D" uid="uid://b76ffwimyi3sm" path="res://sprites/snakeHead-2.png.png" id="6_spgoy"]
+[ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="7_bsx8s"]
+[ext_resource type="Texture2D" uid="uid://sjvkab515afb" path="res://sprites/snakeHead-1.png.png" id="8_3r5ja"]
+[ext_resource type="PackedScene" uid="uid://b6ybdm80pbatp" path="res://scenes/time_spawner.tscn" id="9_r6kfy"]
+[ext_resource type="AudioStream" uid="uid://bs3eh0insxy55" path="res://misc/pickupCoin.wav" id="10_d8i4d"]
+[ext_resource type="AudioStream" uid="uid://baoatoaa4mbrh" path="res://misc/random.wav" id="11_piuav"]
+[ext_resource type="PackedScene" uid="uid://44gvqt8prq2e" path="res://scenes/tutorial.tscn" id="12_4vxjc"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_xlbq2")
+
+[node name="snakeA" parent="." instance=ExtResource("2_4vxjc")]
+position = Vector2(128, 352)
+
+[node name="snakeB" parent="." instance=ExtResource("3_ymewv")]
+position = Vector2(960, 352)
+
+[node name="AppleSpawner" parent="." instance=ExtResource("4_mcu7n")]
+spawnSpeed = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_03m2t")
+volume_db = -12.306
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 320)
+
+[node name="Hud" type="CanvasLayer" parent="."]
+
+[node name="Rem" type="Sprite2D" parent="Hud"]
+position = Vector2(1090, 590)
+scale = Vector2(0.296, 0.35)
+texture = ExtResource("6_spgoy")
+
+[node name="Blue" type="RichTextLabel" parent="Hud/Rem"]
+anchors_preset = -1
+anchor_left = 0.06832294
+anchor_top = 6.64769
+anchor_right = 2.0254183
+anchor_bottom = 7.8619757
+offset_left = -244.03973
+offset_top = -1120.7733
+offset_right = -172.03973
+offset_bottom = -1080.7733
+theme_override_fonts/normal_font = ExtResource("7_bsx8s")
+theme_override_font_sizes/normal_font_size = 96
+metadata/_edit_use_anchors_ = true
+
+[node name="Ram" type="Sprite2D" parent="Hud"]
+position = Vector2(44.249996, 589)
+scale = Vector2(0.32187504, 0.35000002)
+texture = ExtResource("8_3r5ja")
+
+[node name="Red" type="RichTextLabel" parent="Hud/Ram"]
+anchors_preset = -1
+anchor_left = 0.06832294
+anchor_top = 6.64769
+anchor_right = 1.9290022
+anchor_bottom = 8.040547
+offset_left = 103.24308
+offset_top = -1117.916
+offset_right = 175.24307
+offset_bottom = -1077.916
+theme_override_fonts/normal_font = ExtResource("7_bsx8s")
+theme_override_font_sizes/normal_font_size = 96
+metadata/_edit_use_anchors_ = true
+
+[node name="Prefix2" type="RichTextLabel" parent="Hud"]
+anchors_preset = -1
+anchor_right = 0.07725695
+anchor_bottom = 0.06944445
+offset_right = 72.0
+offset_bottom = 39.999996
+theme_override_fonts/normal_font = ExtResource("7_bsx8s")
+theme_override_font_sizes/normal_font_size = 32
+text = "Turn:"
+metadata/_edit_use_anchors_ = true
+
+[node name="RemOrRam" type="RichTextLabel" parent="Hud"]
+offset_left = 144.0
+offset_right = 330.0
+offset_bottom = 73.0
+theme_override_fonts/normal_font = ExtResource("7_bsx8s")
+theme_override_font_sizes/normal_font_size = 32
+
+[node name="DeathScreen" type="Control" parent="Hud"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Hud/DeathScreen"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 256.0
+offset_right = 928.0
+offset_bottom = 512.0
+
+[node name="Win" type="RichTextLabel" parent="Hud/DeathScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5512039
+anchor_top = 0.16628341
+anchor_right = 8.498799
+anchor_bottom = 0.5073326
+offset_left = 246.04816
+offset_top = 217.34866
+offset_right = 318.04803
+offset_bottom = 359.7067
+theme_override_fonts/normal_font = ExtResource("7_bsx8s")
+theme_override_font_sizes/normal_font_size = 96
+text = "0
+"
+fit_content = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Winner" type="RichTextLabel" parent="Hud/DeathScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0762146
+anchor_top = 0.4
+anchor_right = 9.151215
+anchor_bottom = 3.575
+offset_left = 564.9514
+offset_top = 208.0
+offset_right = 636.9514
+offset_bottom = 248.0
+theme_override_fonts/normal_font = ExtResource("7_bsx8s")
+theme_override_font_sizes/normal_font_size = 96
+text = "Won!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Hud/DeathScreen"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 384.0
+offset_right = 896.0
+offset_bottom = 480.0
+theme_override_colors/icon_normal_color = Color(0.6543364, 0.13666287, 0.28185844, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Hud/DeathScreen"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 384.0
+offset_right = 896.0
+offset_bottom = 480.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("7_bsx8s")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[wave][rainbow][center]RESTART"
+
+[node name="TimeSpawner" parent="." instance=ExtResource("9_r6kfy")]
+
+[node name="pickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_d8i4d")
+volume_db = 4.771
+
+[node name="deathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_piuav")
+volume_db = 7.633
+
+[node name="Tutorial" parent="." instance=ExtResource("12_4vxjc")]
+
+[connection signal="pressed" from="Hud/DeathScreen/Button" to="." method="_on_button_pressed"]
