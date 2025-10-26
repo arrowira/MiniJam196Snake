@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dovbw3twqhsk1"]
+
+[ext_resource type="Texture2D" uid="uid://iqhv0tg164wl" path="res://sprites/consumable_sprites.png" id="1_8vrs0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu4yj"]
+size = Vector2(28, 29)
+
+[node name="timePU" type="Node2D"]
+
+[node name="ConsumableSprites" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+scale = Vector2(4, 4)
+texture = ExtResource("1_8vrs0")
+hframes = 2
+frame = 1
+
+[node name="timeCollider" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="timeCollider"]
+position = Vector2(16, 16.5)
+shape = SubResource("RectangleShape2D_vu4yj")
