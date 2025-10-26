@@ -17,6 +17,12 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	#inputs
 	if running:
+		if(!Rect2(Vector2(0, 0), Vector2(1152, 648)).has_point(position)):
+			get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
+			var txt = get_node("/root/main/Hud/DeathScreen/Win")
+			txt.bbcode_enabled = true
+			txt.text = "[color=blue]Blue[/color]"
+			running = false
 		var prevPos = get_parent().getSnakeSegPos(2)
 		var currPos = get_parent().getSnakeSegPos(1)
 		var prevDir = Vector2(-(currPos.x-prevPos.x)/32,-(currPos.y-prevPos.y)/32)
