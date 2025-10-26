@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://3jlldpsx5vpm"]
+[gd_scene load_steps=6 format=3 uid="uid://3jlldpsx5vpm"]
 
 [ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://btptv76as7oeo" path="res://scenes/snakeB.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://bt2b8pp2xn6db" path="res://scenes/AppleSpawner.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bfhbaw05in4qg" path="res://scenes/AppleSpawner.tscn" id="3_sugp2"]
 [ext_resource type="AudioStream" uid="uid://dmhgrfd2s2y8w" path="res://misc/snakeGameMusic.mp3" id="4_jyhfs"]
+[ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="5_tbgi4"]
 
 [node name="main" type="Node2D"]
 
@@ -23,3 +24,17 @@ autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 320)
+
+[node name="HeadsUp! Display(Period)" type="CanvasLayer" parent="."]
+
+[node name="RemOrRam" type="RichTextLabel" parent="HeadsUp! Display(Period)"]
+offset_right = 72.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+text = "Turn:"
+
+[node name="Prefix" type="RichTextLabel" parent="HeadsUp! Display(Period)"]
+offset_left = 66.0
+offset_right = 138.0
+offset_bottom = 40.0
+theme_override_fonts/normal_font = ExtResource("5_tbgi4")
