@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cxgmosw2davrv"]
 
-[ext_resource type="FontFile" uid="uid://5lcd27m73n8t" path="res://Fonts/Returns.ttf" id="1_jfien"]
 [ext_resource type="Script" uid="uid://dob3a6ma780p5" path="res://scenes/main_menu.gd" id="1_y2rfe"]
 [ext_resource type="Texture2D" uid="uid://b2ohhyowgdkob" path="res://misc/snake menu.png" id="2_0bfng"]
+[ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="3_0bfng"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5uv"]
 texture = ExtResource("2_0bfng")
@@ -75,7 +75,7 @@ offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_jfien")
+theme_override_fonts/font = ExtResource("3_0bfng")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_7e6vm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jfien")
@@ -97,7 +97,7 @@ offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_jfien")
+theme_override_fonts/font = ExtResource("3_0bfng")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_7e6vm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jfien")
@@ -110,13 +110,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -352.0
-offset_top = -19.0
-offset_right = 352.0
-offset_bottom = 103.0
+offset_left = -351.0
+offset_top = -50.0
+offset_right = 353.0
+offset_bottom = 113.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("1_jfien")
-theme_override_font_sizes/font_size = 100
+theme_override_fonts/font = ExtResource("3_0bfng")
+theme_override_font_sizes/font_size = 90
 text = "SNAKE"
 horizontal_alignment = 1
 vertical_alignment = 1
