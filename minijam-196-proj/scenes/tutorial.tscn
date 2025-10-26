@@ -28,7 +28,7 @@ text = "[center]Welcome to Caduceus. The red player uses arrow keys, the blue pl
 Red starts first. Use the arrowkeys to start moving"
 
 [node name="pt1Timer" type="Timer" parent="."]
-wait_time = 1.2
+wait_time = 1.6999999999999997
 one_shot = true
 
 [node name="pt2" type="ColorRect" parent="."]
@@ -75,7 +75,7 @@ Apples extend you're snake's length.
 Clocks extend turn length."
 
 [node name="pt2Timer" type="Timer" parent="."]
-wait_time = 1.2
+wait_time = 1.6999999999999997
 one_shot = true
 
 [node name="pt3Timer" type="Timer" parent="."]
