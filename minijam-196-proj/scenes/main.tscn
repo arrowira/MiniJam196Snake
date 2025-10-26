@@ -85,14 +85,14 @@ visible = false
 anchors_preset = -1
 anchor_left = -0.8400927
 anchor_top = -0.23371647
-anchor_right = -0.79374284
-anchor_bottom = 0.10733278
+anchor_right = -0.6578011
+anchor_bottom = 0.10733277
 offset_left = 1198.7869
 offset_top = 341.44827
 offset_right = 1270.7869
 offset_bottom = 381.44824
 theme_override_fonts/normal_font = ExtResource("5_tbgi4")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 96
 metadata/_edit_use_anchors_ = true
 
 [node name="Winner" type="RichTextLabel" parent="Hud"]
@@ -101,13 +101,13 @@ anchors_preset = -1
 anchor_left = -0.073784724
 anchor_right = 0.6128472
 anchor_bottom = 0.34104937
-offset_left = 510.0
-offset_top = 187.0
-offset_right = 582.0
-offset_bottom = 227.0
+offset_left = 647.0
+offset_top = 208.0
+offset_right = 719.0
+offset_bottom = 248.0
 theme_override_fonts/normal_font = ExtResource("5_tbgi4")
-theme_override_font_sizes/normal_font_size = 32
-text = "Won! I still don't know who rem is though, but I may know after 30 seconds!"
+theme_override_font_sizes/normal_font_size = 96
+text = "Won!"
 metadata/_edit_use_anchors_ = true
 
 [node name="RemOrRam" type="RichTextLabel" parent="Hud"]

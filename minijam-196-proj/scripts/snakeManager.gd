@@ -44,7 +44,7 @@ func Collided(area: Area2D) -> void:
 		get_tree().current_scene.get_node("Hud/Win").visible = true
 		var txt = get_node("/root/main/Hud/Win")
 		txt.bbcode_enabled = true
-		txt.text = "[color=red]Red[/color]"
+		txt.text = "[color=blue]Blue[/color]"
 		get_tree().current_scene.get_node("Hud/Winner").visible = true
 		$head.running = false
 	
@@ -57,6 +57,6 @@ func Snake2Head(area: Area2D) -> void:
 		get_tree().current_scene.get_node("Hud/Win").visible = true
 		var txt = get_node("/root/main/Hud/Win")
 		txt.bbcode_enabled = true
-		txt.text = "[color=blue]Blue[/color]"
+		txt.text = "[color=red]Red[/color]"
 		get_tree().current_scene.get_node("Hud/Winner").visible = true
 		$head.running = false
