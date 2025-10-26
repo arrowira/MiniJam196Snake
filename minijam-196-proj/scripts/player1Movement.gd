@@ -2,7 +2,7 @@ extends Node2D
 @export var speed = 20
 var timeSinceLastMove = 0
 
-var direction := Vector2(1,0)
+var direction := Vector2(0,1)
 var turn = 0
 var turnLimit = 10
 var stepTime = 3
