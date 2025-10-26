@@ -6,7 +6,7 @@ func _ready() -> void:
 	snakeSegments.append($head.position)
 	for i in range(segments):
 		var newSegment := player1segment.instantiate()
-		var newSegmentPos := Vector2(-i*32-32,0)
+		var newSegmentPos := Vector2(0,-i*32-32)
 		newSegment.position = newSegmentPos
 		$segmentContainer.add_child(newSegment)
 		snakeSegments.append(newSegmentPos)

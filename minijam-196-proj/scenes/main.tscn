@@ -8,10 +8,10 @@
 [node name="main" type="Node2D"]
 
 [node name="snakeA" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(64, 0)
+position = Vector2(128, 352)
 
 [node name="snakeB" parent="." instance=ExtResource("2_0wfyh")]
-position = Vector2(320, 0)
+position = Vector2(960, 352)
 
 [node name="AppleSpawner" parent="." instance=ExtResource("3_sugp2")]
 spawnSpeed = 2
@@ -20,3 +20,6 @@ spawnSpeed = 2
 stream = ExtResource("4_jyhfs")
 volume_db = -19.939
 autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 320)
