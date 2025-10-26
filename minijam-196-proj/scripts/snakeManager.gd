@@ -44,13 +44,23 @@ func Collided(area: Area2D) -> void:
 		addSegment()
 		area.get_parent().queue_free()
 		get_parent().get_node("pickup").play()
-	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
+	if(area.name == "SnakeBody"):
 		get_parent().get_node("deathSound").play()
 		get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
 		var txt = get_node("/root/main/Hud/DeathScreen/Win")
 		txt.bbcode_enabled = true
 		txt.text = "[color=blue]Blue[/color]"
 		
+		$head.running = false
+	if(area.name == "SnakeHead"):
+		get_parent().get_node("deathSound").play()
+		get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
+		var txt = get_node("/root/main/Hud/DeathScreen/Win")
+		txt.bbcode_enabled = true
+		if get_parent().whosTurn == 1:
+			txt.text = "[color=red]Red[/color]"
+		else:
+			txt.text = "[color=blue]Blue[/color]"
 		$head.running = false
 	
 func Snake2Head(area: Area2D) -> void:
@@ -62,12 +72,22 @@ func Snake2Head(area: Area2D) -> void:
 		$head.turnLimit+=1
 		area.get_parent().queue_free()
 		get_parent().get_node("pickup").play()
-	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
+	if(area.name == "SnakeBody"):
 		get_parent().get_node("deathSound").play()
 		get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
 		var txt = get_node("/root/main/Hud/DeathScreen/Win")
 		txt.bbcode_enabled = true
 		txt.text = "[color=red]Red[/color]"
+		$head.running = false
+	if(area.name == "SnakeHead"):
+		get_parent().get_node("deathSound").play()
+		get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
+		var txt = get_node("/root/main/Hud/DeathScreen/Win")
+		txt.bbcode_enabled = true
+		if get_parent().whosTurn == 1:
+			txt.text = "[color=red]Red[/color]"
+		else:
+			txt.text = "[color=blue]Blue[/color]"
 		$head.running = false
 		
 func getSnakeSegPos(pos: int) -> Vector2:
