@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxgmosw2davrv"]
+[gd_scene load_steps=10 format=3 uid="uid://cxgmosw2davrv"]
 
 [ext_resource type="Script" uid="uid://dob3a6ma780p5" path="res://scripts/main_menu.gd" id="1_y2rfe"]
 [ext_resource type="Texture2D" uid="uid://b2ohhyowgdkob" path="res://misc/snake menu.png" id="2_0bfng"]
 [ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="3_0bfng"]
+[ext_resource type="AudioStream" uid="uid://dkpba4gpvt2e3" path="res://misc/mothLullaby.mp3" id="4_yb5uv"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yb5uv"]
 texture = ExtResource("2_0bfng")
@@ -68,10 +69,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -98.0
-offset_top = -102.0
-offset_right = 339.0
-offset_bottom = -22.0
+offset_left = -223.0
+offset_top = -93.0
+offset_right = 214.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -82,28 +83,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_jfien")
 theme_override_styles/hover = SubResource("StyleBoxFlat_y2rfe")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jfien")
 text = "START!"
-
-[node name="Button2" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -352.0
-offset_top = -102.0
-offset_right = -179.0
-offset_bottom = -22.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_0bfng")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_7e6vm")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_jfien")
-theme_override_styles/hover = SubResource("StyleBoxFlat_y2rfe")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_jfien")
-text = "quit"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -121,5 +100,9 @@ text = "SNAKE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yb5uv")
+volume_db = -11.45
+autoplay = true
+
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_quit_pressed"]
