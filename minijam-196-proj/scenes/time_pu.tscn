@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dovbw3twqhsk1"]
+[gd_scene load_steps=4 format=3 uid="uid://dovbw3twqhsk1"]
 
 [ext_resource type="Texture2D" uid="uid://iqhv0tg164wl" path="res://sprites/consumable_sprites.png" id="1_8vrs0"]
+[ext_resource type="Script" uid="uid://blx55xvufndrn" path="res://scripts/pickupDeletion.gd" id="1_vu4yj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vu4yj"]
 size = Vector2(28, 29)
 
 [node name="timePU" type="Node2D"]
+script = ExtResource("1_vu4yj")
 
 [node name="ConsumableSprites" type="Sprite2D" parent="."]
 position = Vector2(16, 16)
@@ -19,3 +21,5 @@ frame = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="timeCollider"]
 position = Vector2(16, 16.5)
 shape = SubResource("RectangleShape2D_vu4yj")
+
+[connection signal="area_entered" from="timeCollider" to="." method="_on_time_collider_area_entered"]

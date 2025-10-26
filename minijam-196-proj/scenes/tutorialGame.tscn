@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dsskau34qr8d1"]
 
-[ext_resource type="Script" uid="uid://cyhlxeltdgqch" path="res://scenes/main.gd" id="1_xlbq2"]
+[ext_resource type="Script" uid="uid://cyhlxeltdgqch" path="res://scripts/main.gd" id="1_xlbq2"]
 [ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="2_4vxjc"]
 [ext_resource type="PackedScene" uid="uid://btptv76as7oeo" path="res://scenes/snakeB.tscn" id="3_ymewv"]
 [ext_resource type="PackedScene" uid="uid://bfhbaw05in4qg" path="res://scenes/AppleSpawner.tscn" id="4_mcu7n"]

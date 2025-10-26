@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cxgmosw2davrv"]
 
-[ext_resource type="Script" uid="uid://dob3a6ma780p5" path="res://scenes/main_menu.gd" id="1_y2rfe"]
+[ext_resource type="Script" uid="uid://dob3a6ma780p5" path="res://scripts/main_menu.gd" id="1_y2rfe"]
 [ext_resource type="Texture2D" uid="uid://b2ohhyowgdkob" path="res://misc/snake menu.png" id="2_0bfng"]
 [ext_resource type="FontFile" uid="uid://d3vemidl8kefx" path="res://Fonts/fs-ti-92-eno-c.ttf" id="3_0bfng"]
 
