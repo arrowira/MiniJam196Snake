@@ -17,7 +17,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	#inputs
 	if running:
-		if(!Rect2(Vector2(0, 0), Vector2(1152, 648)).has_point(global_position)):
+		if(!Rect2(Vector2(0, 0), Vector2(1152, 616)).has_point(global_position)):
 			get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
 			var txt = get_node("/root/main/Hud/DeathScreen/Win")
 			txt.bbcode_enabled = true
