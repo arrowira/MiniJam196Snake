@@ -81,39 +81,6 @@ theme_override_font_sizes/normal_font_size = 32
 text = "Turn:"
 metadata/_edit_use_anchors_ = true
 
-[node name="Win" type="RichTextLabel" parent="Hud"]
-visible = false
-anchors_preset = -1
-anchor_left = -0.9512039
-anchor_top = -0.23371647
-anchor_right = -0.6291553
-anchor_bottom = 0.10733277
-offset_left = 1303.7869
-offset_top = 359.44827
-offset_right = 1375.7869
-offset_bottom = 399.44824
-theme_override_fonts/normal_font = ExtResource("5_tbgi4")
-theme_override_font_sizes/normal_font_size = 96
-text = "0
-"
-fit_content = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Winner" type="RichTextLabel" parent="Hud"]
-visible = false
-anchors_preset = -1
-anchor_left = -0.073784724
-anchor_right = 0.6128472
-anchor_bottom = 0.34104937
-offset_left = 647.0
-offset_top = 208.0
-offset_right = 719.0
-offset_bottom = 248.0
-theme_override_fonts/normal_font = ExtResource("5_tbgi4")
-theme_override_font_sizes/normal_font_size = 96
-text = "Won!"
-metadata/_edit_use_anchors_ = true
-
 [node name="RemOrRam" type="RichTextLabel" parent="Hud"]
 offset_left = 144.0
 offset_right = 330.0
@@ -121,4 +88,74 @@ offset_bottom = 73.0
 theme_override_fonts/normal_font = ExtResource("5_tbgi4")
 theme_override_font_sizes/normal_font_size = 32
 
+[node name="DeathScreen" type="Control" parent="Hud"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Hud/DeathScreen"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 256.0
+offset_right = 928.0
+offset_bottom = 512.0
+
+[node name="Win" type="RichTextLabel" parent="Hud/DeathScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5512039
+anchor_top = 0.16628341
+anchor_right = 8.498799
+anchor_bottom = 0.5073326
+offset_left = 246.04816
+offset_top = 217.34866
+offset_right = 318.04803
+offset_bottom = 359.7067
+theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+theme_override_font_sizes/normal_font_size = 96
+text = "0
+"
+fit_content = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Winner" type="RichTextLabel" parent="Hud/DeathScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0762146
+anchor_top = 0.4
+anchor_right = 9.151215
+anchor_bottom = 3.575
+offset_left = 564.9514
+offset_top = 208.0
+offset_right = 636.9514
+offset_bottom = 248.0
+theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+theme_override_font_sizes/normal_font_size = 96
+text = "Won!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Hud/DeathScreen"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 384.0
+offset_right = 896.0
+offset_bottom = 480.0
+theme_override_colors/icon_normal_color = Color(0.6543364, 0.13666287, 0.28185844, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Hud/DeathScreen"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 384.0
+offset_right = 896.0
+offset_bottom = 480.0
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("5_tbgi4")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "[wave][rainbow][center]RESTART"
+
 [node name="TimeSpawner" parent="." instance=ExtResource("9_85g3d")]
+
+[connection signal="pressed" from="Hud/DeathScreen/Button" to="." method="_on_button_pressed"]
