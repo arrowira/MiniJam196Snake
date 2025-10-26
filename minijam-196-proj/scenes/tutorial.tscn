@@ -7,7 +7,6 @@
 script = ExtResource("1_8ho6b")
 
 [node name="pt1" type="ColorRect" parent="."]
-visible = false
 modulate = Color(0.56999964, 0.6032721, 0.58303857, 1)
 offset_left = 288.0
 offset_top = 160.0
@@ -53,6 +52,7 @@ bbcode_enabled = true
 text = "[center] Its blue's turn now. The blue player uses WASD to move."
 
 [node name="pt3" type="ColorRect" parent="."]
+visible = false
 modulate = Color(0.56999964, 0.6032721, 0.58303857, 1)
 offset_left = 256.0
 offset_top = 130.0
@@ -74,4 +74,13 @@ text = "[center] As the game continues, powerups will spawn around the arena.
 Apples extend you're snake's length.
 Clocks extend turn length."
 
+[node name="pt2Timer" type="Timer" parent="."]
+wait_time = 1.2
+one_shot = true
+
+[node name="pt3Timer" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="timeout" from="pt1Timer" to="." method="_on_pt_1_timer_timeout"]
+[connection signal="timeout" from="pt2Timer" to="." method="_on_pt_2_timer_timeout"]
+[connection signal="timeout" from="pt3Timer" to="." method="_on_pt_3_timer_timeout"]
