@@ -36,7 +36,9 @@ func addSegment():
 	adding = true
 #Head Collider
 func Collided(area: Area2D) -> void:
-	print(area.name)
+	if(area.name == "timeCollider"):
+		$head.turnLimit+=1
+		area.get_parent().queue_free()
 	if(area.name == "AppleCollider"):
 		addSegment()
 		area.get_parent().queue_free()
@@ -51,7 +53,9 @@ func Collided(area: Area2D) -> void:
 func Snake2Head(area: Area2D) -> void:
 	if(area.name == "AppleCollider"):
 		addSegment()
-		
+		area.get_parent().queue_free()
+	if(area.name == "timeCollider"):
+		$head.turnLimit+=1
 		area.get_parent().queue_free()
 	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
 		get_tree().current_scene.get_node("Hud/Win").visible = true
