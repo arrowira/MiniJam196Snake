@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://3jlldpsx5vpm"]
+[gd_scene load_steps=12 format=3 uid="uid://3jlldpsx5vpm"]
 
 [ext_resource type="PackedScene" uid="uid://dsomo3xmi6joa" path="res://scenes/snakeA.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cyhlxeltdgqch" path="res://scenes/main.gd" id="1_tefeu"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://sjvkab515afb" path="res://sprites/snakeHead-1.png.png" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://b6ybdm80pbatp" path="res://scenes/time_spawner.tscn" id="9_85g3d"]
 [ext_resource type="AudioStream" uid="uid://bs3eh0insxy55" path="res://misc/pickupCoin.wav" id="10_choun"]
+[ext_resource type="AudioStream" uid="uid://baoatoaa4mbrh" path="res://misc/random.wav" id="11_ya4ey"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_tefeu")
@@ -25,7 +26,7 @@ spawnSpeed = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jyhfs")
-volume_db = -19.939
+volume_db = -12.306
 autoplay = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -161,7 +162,10 @@ text = "[wave][rainbow][center]RESTART"
 
 [node name="pickup" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_choun")
+volume_db = 4.771
 
 [node name="deathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_ya4ey")
+volume_db = 7.633
 
 [connection signal="pressed" from="Hud/DeathScreen/Button" to="." method="_on_button_pressed"]

@@ -39,10 +39,13 @@ func Collided(area: Area2D) -> void:
 	if(area.name == "timeCollider"):
 		$head.turnLimit+=1
 		area.get_parent().queue_free()
+		get_parent().get_node("pickup").play()
 	if(area.name == "AppleCollider"):
 		addSegment()
 		area.get_parent().queue_free()
+		get_parent().get_node("pickup").play()
 	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
+		get_parent().get_node("deathSound").play()
 		get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
 		var txt = get_node("/root/main/Hud/DeathScreen/Win")
 		txt.bbcode_enabled = true
@@ -54,10 +57,13 @@ func Snake2Head(area: Area2D) -> void:
 	if(area.name == "AppleCollider"):
 		addSegment()
 		area.get_parent().queue_free()
+		get_parent().get_node("pickup").play()
 	if(area.name == "timeCollider"):
 		$head.turnLimit+=1
 		area.get_parent().queue_free()
+		get_parent().get_node("pickup").play()
 	if(area.name == "SnakeHead") or (area.name == "SnakeBody"):
+		get_parent().get_node("deathSound").play()
 		get_tree().current_scene.get_node("Hud/DeathScreen").visible = true
 		var txt = get_node("/root/main/Hud/DeathScreen/Win")
 		txt.bbcode_enabled = true
